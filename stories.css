@@ -1,9 +1,11 @@
+/* main to wrapp the story to the center of the page */
 .main {
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
+/* The story, the head of the hierarchy */
 .story {
     transform: translate(-50%, -50%);
     width: 100px;
@@ -11,6 +13,7 @@
     overflow: hidden;
 }
 
+/* Profile image style */
 .story img {
     width: 70px;
     border-radius: 50%;
@@ -20,6 +23,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* story circle style with animation */
 .story svg {
     fill: none;
     stroke: #bd3381;
@@ -30,6 +34,7 @@
     animation: loading 4500ms ease-in-out infinite alternate;
 }
 
+/* keyframes for the loading animation */
 @keyframes loading {
     100% {
         stroke: #bd3381;
