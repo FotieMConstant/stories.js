@@ -1,0 +1,39 @@
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.story {
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.story img {
+    width: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.story svg {
+    fill: none;
+    stroke: #bd3381;
+    stroke-width: 3px;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: loading 4500ms ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+    100% {
+        stroke: #bd3381;
+        stroke-dasharray: 10;
+        transform: rotate(200deg);
+    }
+}
