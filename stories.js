@@ -88,10 +88,31 @@ class Story {
     // viewer function for viewing the story
     storyViewer(){
       let __self = this; // assigning global to self for later use
-      let checker = document.getElementsByClassName("checker")[0];
-      checker.classList.add("checking")
-        __self.moveProgressBar(this.items[0].length);
+      let checker = document.getElementsByClassName("checker");
+      // checker.classList.add("checking")
+      //   __self.moveProgressBar(this.items[0].length);
 
+      var counter = 0;  // the index of the current item to show
+
+     const viewingBar = setInterval(function(){
+        console.log("Hello");
+        checker[counter].classList.add("checking");
+        console.log(checker[counter++]);    // get the item and increment
+
+        // clear if you've reached the end
+        if(counter == checker.length){
+          clearInterval(viewingBar);
+        }
+      },3000);
+
+      
+
+      // this.items.map((item, i) => {
+      //   console.log(item);
+      //   this.moveProgressBar(item.length);
+
+      // });
+        
         
 
 
@@ -112,6 +133,7 @@ class Story {
            if (width >= 100) {
              clearInterval(id);
              i = 0;
+             console.log("fully loader")
            } else {
              width++;
              elem.style.width = width + "%";
